@@ -41,8 +41,38 @@ int main (){
     Evaluate my_class (42.0, 225.0, 10.5);
 
     my_class.coefficient();
-    cout <<"Evaluate for gaussainone is: " << my_class.ev <<endl;
+    cout <<"Evaluate for gaussianone is: " << my_class.ev <<endl;
+
+    Evaluate my_class_2 (35.6, 12.25, 35.6);
+    my_class_2.coefficient();
+    cout<<"Evaluate for gaussiantwo is: "<< my_class_2.ev <<endl;
     
     return 0;
     
 }
+
+class Add{
+    public:
+    float gaussianone, gaussiantwo, gaussianthree, gaussianfour;
+
+    viod add(){
+        gaussianthree = gaussianone + gaussiantwo;
+        gaussianfour = gaussianone * gaussiantwo;
+    }
+};
+Add(float num1, float num2){
+    gaussianone = num1;
+    gaussiantwo = num2;
+};
+int main(){
+    int temp;
+    Add my_new_class ();
+    my_new_class.add();
+
+    cout<<"Gaussianthree is:  "<<my_new_class.gaussianthree <<endl;
+    cout<<"Gaussianfour is: "<<my_new_class.gaussianfour<<endl;
+
+    return 0;
+}
+
+
